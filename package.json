@@ -1,0 +1,28 @@
+{
+  "name": "codenova-full-stack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "node --env-file-if-exists=.env scripts/dev.js",
+    "build": "vite build",
+    "db:init": "node --env-file-if-exists=.env scripts/database.js",
+    "seed": "node --env-file-if-exists=.env scripts/database.js --seed",
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "export": "node scripts/export.js",
+    "verify:exports": "node scripts/verify-exports.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "vite": "^7.1.0"
+  }
+}
